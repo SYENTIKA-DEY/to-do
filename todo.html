@@ -1,0 +1,98 @@
+
+<html>
+<head>
+    <title> To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+	<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #acd8a7;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.todo-container {
+    background: #CBEC7D;
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #253107;
+    border-radius: 8px;
+}
+
+ol {
+    list-style-type: upper-roman;
+    padding-left: 45px;
+    color: #253107;
+    font-weight: bold;
+}
+
+li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #253107;
+    padding-bottom: 10px;
+}
+
+.li-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-text {
+    flex-grow: 1;
+    color: #253107;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 5px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+#addBtn { background: #4a90e2; color: white; padding: 0 20px; font-weight: 600; }
+.edit-btn { background: #ffc107; color: #000; }
+.delete-btn { background: #ff4d4d; color: white; }
+
+button:hover { opacity: 0.8; }
+</style>
+</head>
+<body>
+
+    <div class="todo-container">
+        <h2>Tasks To Do:</h2>
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Enter a new task..." onkeypress="handleKeyPress(event)">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        <ol id="taskList">
+            </ol>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
